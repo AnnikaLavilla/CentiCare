@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CentiCare Login</title>
+<link rel="stylesheet" href="CentiCare_Login.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <img src="centicare-logo.png" class="logo" alt="CentiCare Logo">
+
+    <h2>Welcome to CentiCare</h2>
+
+    <!-- Role Toggle -->
+    <div class="toggle">
+        <button class="active" onclick="selectRole(this)">Patient</button>
+        <button onclick="selectRole(this)">Staff</button>
+        <button onclick="selectRole(this)">Admin</button>
+    </div>
+
+    <!-- Login Form -->
+    <form onsubmit="login(event)">
+        <input type="text" id="username" placeholder="Username or Email" required>
+
+        <div class="password-box">
+            <input type="password" id="password" placeholder="Password" required>
+            <span onclick="togglePassword()">👁</span>
+        </div>
+
+        <div class="forgot">
+            <a href="#" onclick="forgotPassword()">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="login-btn">Login</button>
+    </form>
+
+    <p id="error"></p>
+
+</div>
+
+<script src="login.js"></script>
+
+</body>
+</html>

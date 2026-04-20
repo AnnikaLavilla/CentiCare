@@ -1,0 +1,95 @@
+/* SAME BASE */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* TOP BAR */
+.topbar {
+    background: #0A3C30;
+    color: white;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* MENU */
+.menu-wrapper { position: relative; }
+
+.menu-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background: white;
+    color: black;
+    width: 150px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.dropdown p {
+    margin: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown p:hover {
+    background: #eee;
+}
+
+.hidden { display: none; }
+
+/* LAYOUT */
+.container {
+    display: flex;
+    height: calc(100vh - 50px);
+}
+
+.sidebar {
+    width: 220px;
+    background: #f4f4f4;
+    padding: 10px;
+}
+
+.sidebar li { cursor: pointer; padding: 8px; }
+.sidebar li:hover { background: #ddd; }
+
+.main { flex: 1; padding: 15px; }
+
+/* TABS */
+.tab { display: none; }
+.tab.active { display: block; }
+
+/* PATIENT LIST */
+.patient-list li {
+    padding: 10px;
+    margin: 5px 0;
+    background: #eee;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+/* CHART */
+.chart {
+    margin-top: 15px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+
+.chart input, .chart textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 10px;
+}
+
+.hidden { display: none; }

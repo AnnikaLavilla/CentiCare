@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CentiCare HIS</title>
+<link rel="stylesheet" href="staff.css">
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+
+    <h1>CentiCare Hospital Information System</h1>
+
+    <!-- MENU -->
+    <div class="menu-wrapper">
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <div id="dropdownMenu" class="dropdown hidden">
+            <p onclick="goAccount()">Account</p>
+            <p onclick="goHelp()">Help</p>
+            <p onclick="goAbout()">About</p>
+            <hr>
+            <p onclick="logout()">Log out</p>
+        </div>
+    </div>
+
+</div>
+
+<!-- MAIN -->
+<div class="container">
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <h3>Main Explorer</h3>
+
+    <p class="section-title">Master Files</p>
+    <ul>
+        <li onclick="openTab('patients')">Patients</li>
+        <li onclick="openTab('hmo')">HMO / Guarantors</li>
+    </ul>
+
+    <p class="section-title">Transactions</p>
+    <ul>
+        <li onclick="openTab('emergency')">Emergency</li>
+        <li onclick="openTab('outpatient')">Outpatient</li>
+        <li onclick="openTab('inpatient')">Inpatient</li>
+    </ul>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+
+<!-- PATIENTS -->
+<div id="patients" class="tab active">
+<h2>Patients</h2>
+
+<input placeholder="Search patient...">
+
+<table>
+<tr><th>Name</th><th>Status</th></tr>
+<tr><td>Juan Dela Cruz</td><td>Admitted</td></tr>
+<tr><td>Maria Santos</td><td>Discharged</td></tr>
+</table>
+</div>
+
+<!-- INPATIENT -->
+<div id="inpatient" class="tab">
+
+<h2>Inpatient Management</h2>
+
+<div id="patientList">
+<h3>Admitted Patients</h3>
+
+<ul class="patient-list">
+<li onclick="openChart('Juan Dela Cruz')">Juan Dela Cruz</li>
+<li onclick="openChart('Maria Santos')">Maria Santos</li>
+<li onclick="openChart('Pedro Reyes')">Pedro Reyes</li>
+</ul>
+</div>
+
+<!-- CHART -->
+<div id="patientChart" class="chart hidden">
+
+<h3 id="patientName">Patient Chart</h3>
+
+<button onclick="closeChart()">← Back</button>
+
+<hr>
+
+<h4>SBAR</h4>
+<textarea id="sbar"></textarea>
+
+<h4>Vital Signs</h4>
+<input id="bp" placeholder="BP">
+<input id="hr" placeholder="HR">
+<input id="rr" placeholder="RR">
+<input id="temp" placeholder="Temp">
+
+<h4>Doctor Notes</h4>
+<textarea id="doctorNotes"></textarea>
+
+<h4>Progress Notes</h4>
+<textarea id="progressNotes"></textarea>
+
+<button onclick="saveChart()">Save Chart</button>
+
+</div>
+
+</div>
+
+<!-- PLACEHOLDERS -->
+<div id="hmo" class="tab"><h2>HMO</h2></div>
+<div id="emergency" class="tab"><h2>Emergency</h2></div>
+<div id="outpatient" class="tab"><h2>Outpatient</h2></div>
+
+</div>
+</div>
+
+<script src="staff.js"></script>
+
+</body>
+</html>

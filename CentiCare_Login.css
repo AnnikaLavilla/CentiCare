@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #00674F, #0A3C30);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🤍 White Card */
+.container {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 380px;
+    text-align: center;
+    color: #0A3C30;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* 🔍 Bigger Logo */
+.logo {
+    width: clamp(110px, 35%, 160px);
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Title */
+h2 {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+/* Toggle */
+.toggle {
+    display: flex;
+    margin-bottom: 18px;
+}
+
+.toggle button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: #73E6CB;
+    color: #0A3C30;
+    cursor: pointer;
+    margin: 3px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.toggle .active {
+    background: #00674F;
+    color: white;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background: #f7f7f7;
+    color: #0A3C30;
+}
+
+input::placeholder {
+    color: #888;
+}
+
+/* Password */
+.password-box {
+    position: relative;
+}
+
+.password-box span {
+    position: absolute;
+    right: 12px;
+    top: 14px;
+    cursor: pointer;
+}
+
+/* Forgot Password */
+.forgot {
+    display: flex;
+    justify-content: flex-end;
+    margin: 5px 0 15px 0;
+}
+
+.forgot a {
+    font-size: 12px;
+    color: #3EBB9E;
+    text-decoration: none;
+}
+
+/* Button */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: #3EBB9E;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.login-btn:hover {
+    background: #00674F;
+}
+
+/* Error */
+#error {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+    .container {
+        padding: 25px;
+    }
+}
